@@ -1,0 +1,39 @@
+<html>
+<head>
+  <title>Home Work W2D3: Sevtigo</title>
+</head>
+<body>
+  <h1>Homework W2D3: Sevtigo</h1>
+  <form>
+  	<fieldset>
+  		<label>Stars: </label><input type="text" id="bintangkecil">
+  		<button type="button" id="starscrapper">Give me stars!</button>
+  	</fieldset>
+  </form>
+  <div id="starship">
+  </div>
+
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript">
+
+function bintang(kecil){
+	for(i=1;i<kecil;i++){
+		for(j=0;j<i;j++){
+			document.write("*");
+		}
+		document.write("<br>");
+	}
+}
+
+$(document).ready(function(){
+
+	$("#starscrapper").click(function(){
+		jumlahBintang = $("#bintangkecil").val();
+		bintang(jumlahBintang);
+	});
+
+});
+
+</script>
+</body>
+</html>
