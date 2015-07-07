@@ -7,7 +7,8 @@
   <form>
   	<fieldset>
   		<label>Stars: </label><input type="text" id="bintangkecil">
-  		<button type="button" id="starscrapper">Give me stars!</button>
+  		<!-- <button type="button" id="starscrapper">Give me stars!</button> -->
+  		<input type="submit" id="starscrapper">
   	</fieldset>
   </form>
   <div id="starship">
@@ -16,24 +17,25 @@
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript">
 
-function bintang(kecil){
-	for(i=1;i<kecil;i++){
-		for(j=0;j<i;j++){
-			document.write("*");
-		}
-		document.write("<br>");
-	}
-}
-
 $(document).ready(function(){
 
 	$("#starscrapper").click(function(){
-		jumlahBintang = $("#bintangkecil").val();
-		bintang(jumlahBintang);
+		var jumlahBintang = $("#bintangkecil").val();
+		var isiBintang = "";
+		for(i=0;i<jumlahBintang;i++){
+		for(j=0;j<=i;j++){
+			isiBintang += "*";
+		}
+		isiBintang += "<br>";
+	}
+
+	$("#starship").html(isiBintang);
+
+	return false;
 	});
 
 });
-
+//test git
 </script>
 </body>
 </html>
